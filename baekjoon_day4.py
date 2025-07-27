@@ -16,16 +16,19 @@ import sys
 
 # print(result)
 
-digit = sys.stdin.readline()
-n = int(digit)
+n =int(sys.stdin.readline())
+
 a = 0
 result = 0
-for i in range(n):
-    a = i
+for i in range(1, n):
+    digit = str(i).strip()
     for j in digit:
         a += int(j)
+    a += i
     if n == a:
-        result = a
+        result = i
+        break
+    a = 0
 
 print(result)
     
